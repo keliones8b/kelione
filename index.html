@@ -773,9 +773,8 @@
         }
         function check(form)
         {
-                if(form.pin.value == "432108")
+                if(form.pin.value == "adminas")
                 {
-                    document.cookie = "user=adminas";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("checkBtn").style.opacity = "0.5";
                 document.getElementById("ivestiKelionesKoda").style.opacity = "0.5";
@@ -850,22 +849,6 @@
                     document.getElementById("inputas").style.marginLeft = "0";
                     document.getElementById("loading").style.display = "none";
                 }, 4000);
-            }
-        }
-        let cookiis = getCookie("user");
-        if (cookiis != "") {
-            document.getElementById("screen").style.top = "-100%";
-            setTimeout(() => {
-                document.querySelector('#topInfo').scrollIntoView({
-                behavior: 'smooth'
-            });
-            }, 500);
-            
-        }
-        else {
-            document.getElementById("screen").style.top = "0";
-            if (cookiis != "" && cookiis != null) {
-                document.getElementById("screen").style.top = "0";
             }
         }
         

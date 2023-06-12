@@ -7,6 +7,7 @@
     <title>Kelionės</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body onload="loadFunction()">
@@ -28,7 +29,6 @@
         }
         body{
             background-color: #f2f2f2;
-            overflow: hidden;
         }
         #loading{
             width: 100%;
@@ -363,84 +363,84 @@
                 <button style="width: 80px; height: 30px; background-color: transparent; border: 2px solid white; color: white; border-radius: 5px; position: absolute; bottom: 50px;" onclick="instruction5()">Baigti</button>
             </div>
         </div>
-        <p style="margin-left: 15px; font-size: 25px; font-weight: 500;">Kelionė į Kauną</p>
+        <p style="margin-left: 15px; font-size: 25px; font-weight: 500; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 30px;">Kelionė į Rykantus</p>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px; margin-top: 3px;"><hr></div>
         <h2 style="margin-top: 25px;">Važiavimas</h2>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
         <div style="width: 100%; height: auto;">
-            <div class="bus" id="bus1">
+            <div class="bus" id="keliauti1">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 60px; height: 30px; background-color: #2f6198; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center; padding-right: 4px; padding-left: 2px;"><i class="fa-solid fa-bus"></i><span>|</span>29</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; left: 85px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 150px;"><i class="fa-regular fa-building"></i> Šviesos st.</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">10:49</p>
             </div>
-            <div class="arrive" id="arrive1">
+            <div class="arrive" id="keliauti2">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 45px; transform: rotate(90deg);"></i>
                 <p style="font-size: 17px; position: absolute; top: 0; left: 85px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 150px;"><i class="fa-regular fa-building"></i> Grigiškių žiedas</p>
                 <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">10:54</p>
             </div>
-            <button onclick="check1()" id="check1" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti1()" id="baigti1" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="wait" id="wait1">
+            <div class="wait" id="keliauti3">
                 <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-regular fa-clock" style="font-size: 17px; margin-right: 4px;"></i> Laukti 9 min</p>
             </div>
-            <button onclick="check2()" id="check2" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti2()" id="baigti2" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="bus" id="bus2">
+            <div class="bus" id="keliauti4">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 60px; height: 30px; background-color: #2f6198; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center; padding-right: 4px; padding-left: 2px;"><i class="fa-solid fa-bus"></i><span>|</span>68</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; left: 85px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 150px;"><i class="fa-regular fa-building"></i> Grigiškių žiedas</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">11:03</p>
             </div>
-            <div class="arrive" id="arrive2">
+            <div class="arrive" id="keliauti5">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 45px; transform: rotate(90deg);"></i>
                 <p style="font-size: 17px; position: absolute; top: 0; left: 85px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 150px;"><i class="fa-regular fa-building"></i> Lentvaris | Dzūkų g.</p>
                 <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">11:15</p>
             </div>
-            <button onclick="check3()" id="check3" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti3()" id="baigti3" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="eiti" id="eiti1">
+            <div class="eiti" id="keliauti6">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
                 <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 125px;"><i class="fa-regular fa-building"></i> Lentvaris | Dzūkų g.</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">3 min</p>
             </div>
-            <div class="arrive" id="arrive3">
+            <div class="arrive" id="keliauti7">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
                 <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Lentvario geležinkelio stotis</p>
                 <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">11:18</p>
             </div>
-            <button onclick="navigation1()" id="navigation1" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="check4()" id="check4" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="maps1()" id="maps1" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
+            <button onclick="baigti4()" id="baigti4" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="wait" id="wait2">
+            <div class="wait" id="keliauti8">
                 <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-regular fa-clock" style="font-size: 17px; margin-right: 4px;"></i> Laukti 19 min</p>
             </div>
-            <button onclick="check5()" id="check5" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti5()" id="baigti5" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="train" id="train1">
+            <div class="train" id="keliauti9">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 70px; height: 30px; background-color: black; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center; padding-right: 4px; padding-left: 3px;"><i class="fa-solid fa-train-subway"></i><span>|</span>873</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; left: 95px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 160px;"><i class="fa-regular fa-building"></i> Lentvaris</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">11:37</p>
             </div>
-            <div class="arrive" id="arrive4">
+            <div class="arrive" id="keliauti10">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 45px; transform: rotate(90deg);"></i>
-                <p style="font-size: 17px; position: absolute; top: 0; left: 95px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 160px;"><i class="fa-regular fa-building"></i> Kaunas</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">12:49</p>
+                <p style="font-size: 17px; position: absolute; top: 0; left: 95px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 160px;"><i class="fa-regular fa-building"></i> Rykantai</p>
+                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">11:45</p>
             </div>
-            <button onclick="check6()" id="check6" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti6()" id="baigti6" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
@@ -449,114 +449,42 @@
         <h2 style="margin-top: 25px;">Lankymasis</h2>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
         <div style="width: 100%; height: auto;">
-            <div class="eiti" id="ejimas1">
+            <div class="eiti" id="keliauti11">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
-                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 130px;"><i class="fa-regular fa-building"></i> Kaunas</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">27 min</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 130px;"><i class="fa-regular fa-building"></i> Rykantai</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">20 min</p>
             </div>
-            <div class="arrive" id="atvykimas1">
+            <div class="arrive" id="keliauti12">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
-                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Žaliakalnio funikulieriaus žemutinė stotis</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">13:16</p>
+                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Vilsos upelio kriokliai</p>
+                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">12:05</p>
             </div>
-            <button onclick="navigate1()" id="navigate1" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="checking1()" id="checking1" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="maps2()" id="maps2" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
+            <button onclick="baigti7()" id="baigti7" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="visit" id="visit1">
-                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-solid fa-landmark" style="font-size: 17px; margin-right: 4px;"></i> Lankytis 5 min</p>
+            <div class="visit" id="keliauti13">
+                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-solid fa-landmark" style="font-size: 17px; margin-right: 4px;"></i> Lankytis 1 h 56 min</p>
             </div>
-            <button onclick="checking2()" id="checking2" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti8()" id="baigti8" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="eiti" id="ejimas2">
+            <div class="eiti" id="keliauti14">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
-                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 125px;">Žaliakalnio funikulieriaus viršutinė stotis</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">2 min</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 125px;">Vilsos upelio kriokliai</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">22 min</p>
             </div>
-            <div class="arrive" id="atvykimas2">
+            <div class="arrive" id="keliauti15">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
-                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Kristaus prisikėlimo bazilika</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">13:23</p>
+                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;"><i class="fa-regular fa-building"></i> Rykantai</p>
+                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:23</p>
             </div>
-            <button onclick="navigate2()" id="navigate2" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="checking3()" id="checking3" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
-
-        <div style="width: 100%; height: auto;">
-            <div class="visit" id="visit2">
-                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-solid fa-landmark" style="font-size: 17px; margin-right: 4px;"></i> Lankytis 15 min</p>
-            </div>
-            <button onclick="checking4()" id="checking4" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
-
-        <div style="width: 100%; height: auto;">
-            <div class="eiti" id="ejimas3">
-                <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
-                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 125px;">Kristaus prisikėlimo bazilika</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">8 min</p>
-            </div>
-            <div class="arrive" id="atvykimas3">
-                <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
-                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Nacionalinis M. K. Čiurlionio dailės muziejus</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">13:46</p>
-            </div>
-            <button onclick="navigate3()" id="navigate3" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="checking5()" id="checking5" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
-
-        <div style="width: 100%; height: auto;">
-            <div class="visit" id="visit3">
-                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-solid fa-landmark" style="font-size: 17px; margin-right: 4px;"></i> Lankytis 1 h</p>
-            </div>
-            <button onclick="checking6()" id="checking6" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
-
-        <div style="width: 100%; height: auto;">
-            <div class="eiti" id="ejimas4">
-                <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
-                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 130px;">Nacionalinis M. K. Čiurlionio dailės muziejus</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">4 min</p>
-            </div>
-            <div class="arrive" id="atvykimas4">
-                <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
-                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Laisvės alėja</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:50</p>
-            </div>
-            <button onclick="navigate4()" id="navigate4" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="checking7()" id="checking7" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
-
-        <div style="width: 100%; height: auto;">
-            <div class="visit" id="visit4">
-                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-solid fa-landmark" style="font-size: 17px; margin-right: 4px;"></i> Lankytis 1 h 39 min</p>
-            </div>
-            <button onclick="checking8()" id="checking8" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
-
-        <div style="width: 100%; height: auto;">
-            <div class="eiti" id="ejimas5">
-                <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
-                <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 130px;">Laisvės alėja</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">21 min</p>
-            </div>
-            <div class="arrive" id="atvykimas5">
-                <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
-                <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;">Kauno geležinkelio stotis</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">16:50</p>
-            </div>
-            <button onclick="navigate5()" id="navigate5" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="checking9()" id="checking9" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="maps3()" id="maps3" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
+            <button onclick="baigti9()" id="baigti9" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
@@ -565,56 +493,56 @@
         <h2 style="margin-top: 25px;">Važiavimas</h2>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
         <div style="width: 100%; height: auto;">
-            <div class="train" id="traukinukas1">
+            <div class="train" id="keliauti16">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 70px; height: 30px; background-color: black; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center; padding-right: 4px; padding-left: 3px;"><i class="fa-solid fa-train-subway"></i><span>|</span>882</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; left: 95px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 160px;"><i class="fa-regular fa-building"></i> Kaunas</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">16:50</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; left: 95px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 160px;"><i class="fa-regular fa-building"></i> Rykantai</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:23</p>
             </div>
-            <div class="arrive" id="atvykimukas1">
+            <div class="arrive" id="keliauti17">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 45px; transform: rotate(90deg);"></i>
                 <p style="font-size: 17px; position: absolute; top: 0; left: 95px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 160px;"><i class="fa-regular fa-building"></i> Lentvaris</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">18:01</p>
+                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:32</p>
             </div>
-            <button onclick="pabaigtukas1()" id="pabaigtukas1" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti10()" id="baigti10" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="eiti" id="ejimukas1">
+            <div class="eiti" id="keliauti18">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 30px; height: 30px; background-color: darkgrey; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center;"><i class="fa-solid fa-person-walking"></i></p>
                 <p style="font-size: 17px; position: absolute; top: 10px; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 125px;">Lentvario geležinkelio stotis</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">2 min</p>
             </div>
-            <div class="arrive" id="atvykimukas2">
+            <div class="arrive" id="keliauti19">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 30px; transform: rotate(90deg);"></i>
                 <p style="font-size: 17px; position: absolute; top: 0; left: 55px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 120px;"><i class="fa-regular fa-building"></i> Lentvaris | Dzūkų g.</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">18:03</p>
+                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:34</p>
             </div>
-            <button onclick="navigacijukas1()" id="navigacijukas1" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
-            <button onclick="pabaigtukas2()" id="pabaigtukas2" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="maps4()" id="maps4" style="width: 15%; height: 72px; border: none; background-color: white; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><img src="maps.png" alt="Navigate with Google Maps" style="width: 40px; margin-top: 5px;"></button>
+            <button onclick="baigti11()" id="baigti11" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -30%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="wait" id="laukimukas1">
-                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-regular fa-clock" style="font-size: 17px; margin-right: 4px;"></i> Laukti 15 min</p>
+            <div class="wait" id="keliauti20">
+                <p style="font-size: 15px; position: absolute; left: 20px;"><i class="fa-regular fa-clock" style="font-size: 17px; margin-right: 4px;"></i> Laukti 6 min</p>
             </div>
-            <button onclick="pabaigtukas3()" id="pabaigtukas3" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti12()" id="baigti12" style="width: 15%; height: 42px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -42px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
 
         <div style="width: 100%; height: auto;">
-            <div class="bus" id="traukinukas2">
+            <div class="bus" id="keliauti21">
                 <p style="position: absolute; top: 5px; left: 15px; font-size: 15px; width: 60px; height: 30px; background-color: #2f6198; color: white; border-radius: 5px; display: flex; justify-content: space-around; align-items: center; padding-right: 4px; padding-left: 2px;"><i class="fa-solid fa-bus"></i><span>|</span>68</p>
                 <p style="font-size: 17px; position: absolute; top: 10px; left: 85px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 150px;"><i class="fa-regular fa-building"></i> Lentvaris | Dzūkų g.</p>
-                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">18:18</p>
+                <p style="font-size: 17px; position: absolute; top: 10px; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:40</p>
             </div>
-            <div class="arrive" id="atvykimukas3">
+            <div class="arrive" id="keliauti22">
                 <i class="fa-solid fa-arrow-turn-up" style="font-size: 20px; position: absolute; top: 2px; left: 45px; transform: rotate(90deg);"></i>
                 <p style="font-size: 17px; position: absolute; top: 0; left: 85px; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; padding-right: 150px;"><i class="fa-regular fa-building"></i> Grigiškių žiedas</p>
-                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">18:29</p>
+                <p style="font-size: 17px; position: absolute; top: 0; right: 15px; font-weight: 500; background-color: #f2f2f2; box-shadow: 0 0 15px #f2f2f2; padding-left: 3px;">14:51</p>
             </div>
-            <button onclick="pabaigtukas4()" id="pabaigtukas4" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
+            <button onclick="baigti13()" id="baigti13" style="width: 15%; height: 72px; border: none; background-color: green; color: white; font-size: 25px; position: absolute; margin-top: -72px; right: -15%; z-index: 4;"><i class="fa-solid fa-check"></i></button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 15px; padding-right: 15px;"><hr></div>
     </div>
@@ -774,8 +702,9 @@
         }
         function check(form)
         {
-                if(form.pin.value == "adminas")
+                if(form.pin.value == "951357")
                 {
+                    document.cookie = "user=adminas";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("checkBtn").style.opacity = "0.5";
                 document.getElementById("ivestiKelionesKoda").style.opacity = "0.5";
@@ -850,6 +779,22 @@
                     document.getElementById("inputas").style.marginLeft = "0";
                     document.getElementById("loading").style.display = "none";
                 }, 4000);
+            }
+        }
+        let cookiis = getCookie("user");
+        if (cookiis != "") {
+            document.getElementById("screen").style.top = "-100%";
+            setTimeout(() => {
+                document.querySelector('#topInfo').scrollIntoView({
+                behavior: 'smooth'
+            });
+            }, 500);
+            
+        }
+        else {
+            document.getElementById("screen").style.top = "0";
+            if (cookiis != "" && cookiis != null) {
+                document.getElementById("screen").style.top = "0";
             }
         }
         
@@ -998,119 +943,65 @@
             document.getElementById("closeButtons").style.display = "none";
             document.getElementById("extraMenu").style.opacity = "0";
             document.getElementById("pabaigimaiAtsaukti").style.display = "flex";
-            document.getElementById("bus1").style.opacity = "1";
-            document.getElementById("bus2").style.opacity = "1";
-            document.getElementById("train1").style.opacity = "1";
-            document.getElementById("arrive1").style.opacity = "1";
-            document.getElementById("arrive2").style.opacity = "1";
-            document.getElementById("arrive3").style.opacity = "1";
-            document.getElementById("arrive4").style.opacity = "1";
-            document.getElementById("wait1").style.opacity = "1";
-            document.getElementById("wait2").style.opacity = "1";
-            document.getElementById("eiti1").style.opacity = "1";
-            document.getElementById("ejimas1").style.opacity = "1";
-            document.getElementById("ejimas2").style.opacity = "1";
-            document.getElementById("ejimas3").style.opacity = "1";
-            document.getElementById("ejimas4").style.opacity = "1";
-            document.getElementById("ejimas5").style.opacity = "1";
-            document.getElementById("atvykimas1").style.opacity = "1";
-            document.getElementById("atvykimas2").style.opacity = "1";
-            document.getElementById("atvykimas3").style.opacity = "1";
-            document.getElementById("atvykimas4").style.opacity = "1";
-            document.getElementById("atvykimas5").style.opacity = "1";
-            document.getElementById("visit1").style.opacity = "1";
-            document.getElementById("visit2").style.opacity = "1";
-            document.getElementById("visit3").style.opacity = "1";
-            document.getElementById("visit4").style.opacity = "1";
-            document.getElementById("traukinukas1").style.opacity = "1";
-            document.getElementById("traukinukas2").style.opacity = "1";
-            document.getElementById("atvykimukas1").style.opacity = "1";
-            document.getElementById("atvykimukas2").style.opacity = "1";
-            document.getElementById("atvykimukas3").style.opacity = "1";
-            document.getElementById("ejimukas1").style.opacity = "1";
-            document.getElementById("laukimukas1").style.opacity = "1";
-            document.getElementById("bus1").style.opacity = "1";
-            document.getElementById("bus2").style.opacity = "1";
-            document.getElementById("train1").style.opacity = "1";
-            document.getElementById("arrive1").style.opacity = "1";
-            document.getElementById("arrive2").style.opacity = "1";
-            document.getElementById("arrive3").style.opacity = "1";
-            document.getElementById("arrive4").style.opacity = "1";
-            document.getElementById("wait1").style.opacity = "1";
-            document.getElementById("wait2").style.opacity = "1";
-            document.getElementById("eiti1").style.opacity = "1";
-            document.getElementById("ejimas1").style.opacity = "1";
-            document.getElementById("ejimas2").style.opacity = "1";
-            document.getElementById("ejimas3").style.opacity = "1";
-            document.getElementById("ejimas4").style.opacity = "1";
-            document.getElementById("ejimas5").style.opacity = "1";
-            document.getElementById("atvykimas1").style.opacity = "1";
-            document.getElementById("atvykimas2").style.opacity = "1";
-            document.getElementById("atvykimas3").style.opacity = "1";
-            document.getElementById("atvykimas4").style.opacity = "1";
-            document.getElementById("atvykimas5").style.opacity = "1";
-            document.getElementById("visit1").style.opacity = "1";
-            document.getElementById("visit2").style.opacity = "1";
-            document.getElementById("visit3").style.opacity = "1";
-            document.getElementById("visit4").style.opacity = "1";
-            document.getElementById("traukinukas1").style.opacity = "1";
-            document.getElementById("traukinukas2").style.opacity = "1";
-            document.getElementById("atvykimukas1").style.opacity = "1";
-            document.getElementById("atvykimukas2").style.opacity = "1";
-            document.getElementById("atvykimukas3").style.opacity = "1";
-            document.getElementById("ejimukas1").style.opacity = "1";
-            document.getElementById("laukimukas1").style.opacity = "1";
+            document.getElementById("keliauti1").style.opacity = "1";
+            document.getElementById("keliauti2").style.opacity = "1";
+            document.getElementById("keliauti3").style.opacity = "1";
+            document.getElementById("keliauti4").style.opacity = "1";
+            document.getElementById("keliauti5").style.opacity = "1";
+            document.getElementById("keliauti6").style.opacity = "1";
+            document.getElementById("keliauti7").style.opacity = "1";
+            document.getElementById("keliauti8").style.opacity = "1";
+            document.getElementById("keliauti9").style.opacity = "1";
+            document.getElementById("keliauti10").style.opacity = "1";
+            document.getElementById("keliauti11").style.opacity = "1";
+            document.getElementById("keliauti12").style.opacity = "1";
+            document.getElementById("keliauti13").style.opacity = "1";
+            document.getElementById("keliauti14").style.opacity = "1";
+            document.getElementById("keliauti15").style.opacity = "1";
+            document.getElementById("keliauti16").style.opacity = "1";
+            document.getElementById("keliauti17").style.opacity = "1";
+            document.getElementById("keliauti18").style.opacity = "1";
+            document.getElementById("keliauti19").style.opacity = "1";
+            document.getElementById("keliauti20").style.opacity = "1";
+            document.getElementById("keliauti21").style.opacity = "1";
+            document.getElementById("keliauti22").style.opacity = "1";
+            
 
-            document.getElementById("bus1").style.pointerEvents = "all";
-            document.getElementById("bus2").style.pointerEvents = "all";
-            document.getElementById("train1").style.pointerEvents = "all";
-            document.getElementById("arrive1").style.pointerEvents = "all";
-            document.getElementById("arrive2").style.pointerEvents = "all";
-            document.getElementById("arrive3").style.pointerEvents = "all";
-            document.getElementById("arrive4").style.pointerEvents = "all";
-            document.getElementById("wait1").style.pointerEvents = "all";
-            document.getElementById("wait2").style.pointerEvents = "all";
-            document.getElementById("eiti1").style.pointerEvents = "all";
-            document.getElementById("ejimas1").style.pointerEvents = "all";
-            document.getElementById("ejimas2").style.pointerEvents = "all";
-            document.getElementById("ejimas3").style.pointerEvents = "all";
-            document.getElementById("ejimas4").style.pointerEvents = "all";
-            document.getElementById("ejimas5").style.pointerEvents = "all";
-            document.getElementById("atvykimas1").style.pointerEvents = "all";
-            document.getElementById("atvykimas2").style.pointerEvents = "all";
-            document.getElementById("atvykimas3").style.pointerEvents = "all";
-            document.getElementById("atvykimas4").style.pointerEvents = "all";
-            document.getElementById("atvykimas5").style.pointerEvents = "all";
-            document.getElementById("visit1").style.pointerEvents = "all";
-            document.getElementById("visit2").style.pointerEvents = "all";
-            document.getElementById("visit3").style.pointerEvents = "all";
-            document.getElementById("visit4").style.pointerEvents = "all";
-            document.getElementById("traukinukas1").style.pointerEvents = "all";
-            document.getElementById("traukinukas2").style.pointerEvents = "all";
-            document.getElementById("atvykimukas1").style.pointerEvents = "all";
-            document.getElementById("atvykimukas2").style.pointerEvents = "all";
-            document.getElementById("atvykimukas3").style.pointerEvents = "all";
-            document.getElementById("ejimukas1").style.pointerEvents = "all";
-            document.getElementById("laukimukas1").style.pointerEvents = "all";
-            document.cookie = "vaziavimas-1=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziavimas-2=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziavimas-3=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziavimas-4=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziavimas-5=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziavimas-6=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-1=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-2=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-3=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-4=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-5=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-6=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-7=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-8=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "lankymasis-9=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziuojamas-1=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziuojamas-2=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziuojamas-3=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.cookie = "vaziuojamas-4=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("keliauti1").style.pointerEvents = "all";
+            document.getElementById("keliauti2").style.pointerEvents = "all";
+            document.getElementById("keliauti3").style.pointerEvents = "all";
+            document.getElementById("keliauti4").style.pointerEvents = "all";
+            document.getElementById("keliauti5").style.pointerEvents = "all";
+            document.getElementById("keliauti6").style.pointerEvents = "all";
+            document.getElementById("keliauti7").style.pointerEvents = "all";
+            document.getElementById("keliauti8").style.pointerEvents = "all";
+            document.getElementById("keliauti9").style.pointerEvents = "all";
+            document.getElementById("keliauti10").style.pointerEvents = "all";
+            document.getElementById("keliauti11").style.pointerEvents = "all";
+            document.getElementById("keliauti12").style.pointerEvents = "all";
+            document.getElementById("keliauti13").style.pointerEvents = "all";
+            document.getElementById("keliauti14").style.pointerEvents = "all";
+            document.getElementById("keliauti15").style.pointerEvents = "all";
+            document.getElementById("keliauti16").style.pointerEvents = "all";
+            document.getElementById("keliauti17").style.pointerEvents = "all";
+            document.getElementById("keliauti18").style.pointerEvents = "all";
+            document.getElementById("keliauti19").style.pointerEvents = "all";
+            document.getElementById("keliauti20").style.pointerEvents = "all";
+            document.getElementById("keliauti21").style.pointerEvents = "all";
+            document.getElementById("keliauti22").style.pointerEvents = "all";
+            document.cookie = "baigimas1=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas2=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas3=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas4=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas5=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas6=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas7=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas8=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas9=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas10=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas11=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas12=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.cookie = "baigimas13=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
             setTimeout(() => {
                 document.getElementById("extraMenu").style.height = "0";
                 document.getElementById("extraMenu").style.width = "0";
@@ -1178,94 +1069,165 @@
             }
         }
 
-        const bus1 = document.getElementById("bus1");
-        const bus2 = document.getElementById("bus2");
-        const train1 = document.getElementById("train1");
-        const arrive1 = document.getElementById("arrive1");
-        const arrive2 = document.getElementById("arrive2");
-        const arrive3 = document.getElementById("arrive3");
-        const arrive4 = document.getElementById("arrive4");
-        const wait1 = document.getElementById("wait1");
-        const wait2 = document.getElementById("wait2");
-        const eiti1 = document.getElementById("eiti1");
+        const keliauti1 = document.getElementById("keliauti1");
+        const keliauti2 = document.getElementById("keliauti2");
+        const keliauti3 = document.getElementById("keliauti3");
+        const keliauti4 = document.getElementById("keliauti4");
+        const keliauti5 = document.getElementById("keliauti5");
+        const keliauti6 = document.getElementById("keliauti6");
+        const keliauti7 = document.getElementById("keliauti7");
+        const keliauti8 = document.getElementById("keliauti8");
+        const keliauti9 = document.getElementById("keliauti9");
+        const keliauti10 = document.getElementById("keliauti10");
+        const keliauti11 = document.getElementById("keliauti11");
+        const keliauti12 = document.getElementById("keliauti12");
+        const keliauti13 = document.getElementById("keliauti13");
+        const keliauti14 = document.getElementById("keliauti14");
+        const keliauti15 = document.getElementById("keliauti15");
+        const keliauti16 = document.getElementById("keliauti16");
+        const keliauti17 = document.getElementById("keliauti17");
+        const keliauti18 = document.getElementById("keliauti18");
+        const keliauti19 = document.getElementById("keliauti19");
+        const keliauti20 = document.getElementById("keliauti20");
+        const keliauti21 = document.getElementById("keliauti21");
+        const keliauti22 = document.getElementById("keliauti22");
 
         const chevron = document.getElementById("chevron");
         const ellipsis = document.getElementById("ellipsis");
-
-        const ejimas1 = document.getElementById("ejimas1");
-        const ejimas2 = document.getElementById("ejimas2");
-        const ejimas3 = document.getElementById("ejimas3");
-        const ejimas4 = document.getElementById("ejimas4");
-        const ejimas5 = document.getElementById("ejimas5");
-        const atvykimas1 = document.getElementById("atvykimas1");
-        const atvykimas2 = document.getElementById("atvykimas2");
-        const atvykimas3 = document.getElementById("atvykimas3");
-        const atvykimas4 = document.getElementById("atvykimas4");
-        const atvykimas5 = document.getElementById("atvykimas5");
-        const visit1 = document.getElementById("visit1");
-        const visit2 = document.getElementById("visit2");
-        const visit3 = document.getElementById("visit3");
-        const visit4 = document.getElementById("visit4");
-
-        const traukinukas1 = document.getElementById("traukinukas1");
-        const traukinukas2 = document.getElementById("traukinukas2");
-        const atvykimukas1 = document.getElementById("atvykimukas1");
-        const atvykimukas2 = document.getElementById("atvykimukas2");
-        const atvykimukas3 = document.getElementById("atvykimukas3");
-        const ejimukas1 = document.getElementById("ejimukas1");
-        const laukimukas1 = document.getElementById("laukimukas1");
-        new ClickAndHold(bus1, () => {
-            bus1.style.marginLeft = "-15%";
-            arrive1.style.marginLeft = "-15%";
-            document.getElementById("check1").style.right = "0";
+        new ClickAndHold(keliauti1, () => {
+            keliauti1.style.marginLeft = "-15%";
+            keliauti2.style.marginLeft = "-15%";
+            document.getElementById("baigti1").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(bus2, () => {
-            bus2.style.marginLeft = "-15%";
-            arrive2.style.marginLeft = "-15%";
-            document.getElementById("check3").style.right = "0";
+        new ClickAndHold(keliauti2, () => {
+            keliauti1.style.marginLeft = "-15%";
+            keliauti2.style.marginLeft = "-15%";
+            document.getElementById("baigti1").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(train1, () => {
-            train1.style.marginLeft = "-15%";
-            arrive4.style.marginLeft = "-15%";
-            document.getElementById("check6").style.right = "0";
+        new ClickAndHold(keliauti3, () => {
+            keliauti3.style.marginLeft = "-15%";
+            document.getElementById("baigti2").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(arrive1, () => {
-            bus1.style.marginLeft = "-15%";
-            arrive1.style.marginLeft = "-15%";
-            document.getElementById("check1").style.right = "0";
+        new ClickAndHold(keliauti4, () => {
+            keliauti4.style.marginLeft = "-15%";
+            keliauti5.style.marginLeft = "-15%";
+            document.getElementById("baigti3").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(arrive2, () => {
-            bus2.style.marginLeft = "-15%";
-            arrive2.style.marginLeft = "-15%";
-            document.getElementById("check3").style.right = "0";
+        new ClickAndHold(keliauti5, () => {
+            keliauti4.style.marginLeft = "-15%";
+            keliauti5.style.marginLeft = "-15%";
+            document.getElementById("baigti3").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(arrive3, () => {
-            eiti1.style.marginLeft = "-30%";
-            arrive3.style.marginLeft = "-30%";
-            document.getElementById("check4").style.right = "0";
-            document.getElementById("navigation1").style.right = "15%";
+        new ClickAndHold(keliauti6, () => {
+            keliauti6.style.marginLeft = "-30%";
+            keliauti7.style.marginLeft = "-30%";
+            document.getElementById("baigti4").style.right = "0";
+            document.getElementById("maps1").style.right = "15%";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(wait1, () => {
-            document.getElementById("wait1").style.marginLeft = "-15%";
-            document.getElementById("check2").style.right = "0";
+        new ClickAndHold(keliauti7, () => {
+            keliauti6.style.marginLeft = "-30%";
+            keliauti7.style.marginLeft = "-30%";
+            document.getElementById("baigti4").style.right = "0";
+            document.getElementById("maps1").style.right = "15%";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(wait2, () => {
-            document.getElementById("wait2").style.marginLeft = "-15%";
-            document.getElementById("check5").style.right = "0";
+        new ClickAndHold(keliauti8, () => {
+            keliauti8.style.marginLeft = "-15%";
+            document.getElementById("baigti5").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
-        new ClickAndHold(eiti1, () => {
-            eiti1.style.marginLeft = "-30%";
-            arrive3.style.marginLeft = "-30%";
-            document.getElementById("check4").style.right = "0";
-            document.getElementById("navigation1").style.right = "15%";
+        new ClickAndHold(keliauti9, () => {
+            keliauti9.style.marginLeft = "-15%";
+            keliauti10.style.marginLeft = "-15%";
+            document.getElementById("baigti6").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti10, () => {
+            keliauti9.style.marginLeft = "-15%";
+            keliauti10.style.marginLeft = "-15%";
+            document.getElementById("baigti6").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti11, () => {
+            keliauti11.style.marginLeft = "-30%";
+            keliauti12.style.marginLeft = "-30%";
+            document.getElementById("baigti7").style.right = "0";
+            document.getElementById("maps2").style.right = "15%";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti12, () => {
+            keliauti11.style.marginLeft = "-30%";
+            keliauti12.style.marginLeft = "-30%";
+            document.getElementById("baigti7").style.right = "0";
+            document.getElementById("maps2").style.right = "15%";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti13, () => {
+            keliauti13.style.marginLeft = "-15%";
+            document.getElementById("baigti8").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti14, () => {
+            keliauti14.style.marginLeft = "-30%";
+            keliauti15.style.marginLeft = "-30%";
+            document.getElementById("baigti9").style.right = "0";
+            document.getElementById("maps3").style.right = "15%";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti15, () => {
+            keliauti14.style.marginLeft = "-30%";
+            keliauti15.style.marginLeft = "-30%";
+            document.getElementById("baigti9").style.right = "0";
+            document.getElementById("maps3").style.right = "15%";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti16, () => {
+            keliauti16.style.marginLeft = "-15%";
+            keliauti17.style.marginLeft = "-15%";
+            document.getElementById("baigti10").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti17, () => {
+            keliauti16.style.marginLeft = "-15%";
+            keliauti17.style.marginLeft = "-15%";
+            document.getElementById("baigti10").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti18, () => {
+            keliauti18.style.marginLeft = "-30%";
+            keliauti19.style.marginLeft = "-30%";
+            document.getElementById("baigti11").style.right = "0";
+            document.getElementById("maps4").style.right = "15%";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti19, () => {
+            keliauti18.style.marginLeft = "-30%";
+            keliauti19.style.marginLeft = "-30%";
+            document.getElementById("baigti11").style.right = "0";
+            document.getElementById("maps4").style.right = "15%";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti20, () => {
+            keliauti20.style.marginLeft = "-15%";
+            document.getElementById("baigti12").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti21, () => {
+            keliauti21.style.marginLeft = "-15%";
+            keliauti22.style.marginLeft = "-15%";
+            document.getElementById("baigti13").style.right = "0";
+            document.getElementById("closeButtons").style.display = "block";
+        })
+        new ClickAndHold(keliauti22, () => {
+            keliauti21.style.marginLeft = "-15%";
+            keliauti22.style.marginLeft = "-15%";
+            document.getElementById("baigti13").style.right = "0";
             document.getElementById("closeButtons").style.display = "block";
         })
 
@@ -1278,323 +1240,170 @@
             document.getElementById("closeButtons").style.display = "block";
         })
 
-        new ClickAndHold(ejimas1, () => {
-            ejimas1.style.marginLeft = "-30%";
-            atvykimas1.style.marginLeft = "-30%";
-            document.getElementById("checking1").style.right = "0";
-            document.getElementById("navigate1").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(ejimas2, () => {
-            ejimas2.style.marginLeft = "-30%";
-            atvykimas2.style.marginLeft = "-30%";
-            document.getElementById("checking3").style.right = "0";
-            document.getElementById("navigate2").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(ejimas3, () => {
-            ejimas3.style.marginLeft = "-30%";
-            atvykimas3.style.marginLeft = "-30%";
-            document.getElementById("checking5").style.right = "0";
-            document.getElementById("navigate3").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(ejimas4, () => {
-            ejimas4.style.marginLeft = "-30%";
-            atvykimas4.style.marginLeft = "-30%";
-            document.getElementById("checking7").style.right = "0";
-            document.getElementById("navigate4").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(ejimas5, () => {
-            ejimas5.style.marginLeft = "-30%";
-            atvykimas5.style.marginLeft = "-30%";
-            document.getElementById("checking9").style.right = "0";
-            document.getElementById("navigate5").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimas1, () => {
-            ejimas1.style.marginLeft = "-30%";
-            atvykimas1.style.marginLeft = "-30%";
-            document.getElementById("checking1").style.right = "0";
-            document.getElementById("navigate1").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimas2, () => {
-            ejimas2.style.marginLeft = "-30%";
-            atvykimas2.style.marginLeft = "-30%";
-            document.getElementById("checking3").style.right = "0";
-            document.getElementById("navigate2").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimas3, () => {
-            ejimas3.style.marginLeft = "-30%";
-            atvykimas3.style.marginLeft = "-30%";
-            document.getElementById("checking5").style.right = "0";
-            document.getElementById("navigate3").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimas4, () => {
-            ejimas4.style.marginLeft = "-30%";
-            atvykimas4.style.marginLeft = "-30%";
-            document.getElementById("checking7").style.right = "0";
-            document.getElementById("navigate4").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimas5, () => {
-            ejimas5.style.marginLeft = "-30%";
-            atvykimas5.style.marginLeft = "-30%";
-            document.getElementById("checking9").style.right = "0";
-            document.getElementById("navigate5").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(visit1, () => {
-            visit1.style.marginLeft = "-15%";
-            document.getElementById("checking2").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(visit2, () => {
-            visit2.style.marginLeft = "-15%";
-            document.getElementById("checking4").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(visit3, () => {
-            visit3.style.marginLeft = "-15%";
-            document.getElementById("checking6").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(visit4, () => {
-            visit4.style.marginLeft = "-15%";
-            document.getElementById("checking8").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-
-        new ClickAndHold(atvykimukas1, () => {
-            atvykimukas1.style.marginLeft = "-15%";
-            traukinukas1.style.marginLeft = "-15%";
-            document.getElementById("pabaigtukas1").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimukas2, () => {
-            ejimukas1.style.marginLeft = "-30%";
-            atvykimukas2.style.marginLeft = "-30%";
-            document.getElementById("pabaigtukas2").style.right = "0";
-            document.getElementById("navigacijukas1").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(atvykimukas3, () => {
-            atvykimukas3.style.marginLeft = "-15%";
-            traukinukas2.style.marginLeft = "-15%";
-            document.getElementById("pabaigtukas4").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(traukinukas1, () => {
-            atvykimukas1.style.marginLeft = "-15%";
-            traukinukas1.style.marginLeft = "-15%";
-            document.getElementById("pabaigtukas1").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(traukinukas2, () => {
-            atvykimukas3.style.marginLeft = "-15%";
-            traukinukas2.style.marginLeft = "-15%";
-            document.getElementById("pabaigtukas4").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(ejimukas1, () => {
-            ejimukas1.style.marginLeft = "-30%";
-            atvykimukas2.style.marginLeft = "-30%";
-            document.getElementById("pabaigtukas2").style.right = "0";
-            document.getElementById("navigacijukas1").style.right = "15%";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-        new ClickAndHold(laukimukas1, () => {
-            laukimukas1.style.marginLeft = "-15%";
-            document.getElementById("pabaigtukas3").style.right = "0";
-            document.getElementById("closeButtons").style.display = "block";
-        })
-
         function closeButtons() {
-            document.getElementById("bus1").style.marginLeft = "0";
-            document.getElementById("bus2").style.marginLeft = "0";
-            document.getElementById("train1").style.marginLeft = "0";
-            document.getElementById("arrive1").style.marginLeft = "0";
-            document.getElementById("arrive2").style.marginLeft = "0";
-            document.getElementById("arrive3").style.marginLeft = "0";
-            document.getElementById("arrive4").style.marginLeft = "0";
-            document.getElementById("wait1").style.marginLeft = "0";
-            document.getElementById("wait2").style.marginLeft = "0";
-            document.getElementById("eiti1").style.marginLeft = "0";
-            document.getElementById("navigation1").style.right = "-15%";
-            document.getElementById("check1").style.right = "-15%";
-            document.getElementById("check2").style.right = "-15%";
-            document.getElementById("check3").style.right = "-15%";
-            document.getElementById("check4").style.right = "-30%";
-            document.getElementById("check5").style.right = "-15%";
-            document.getElementById("check6").style.right = "-15%";
+            document.getElementById("keliauti1").style.marginLeft = "0";
+            document.getElementById("keliauti2").style.marginLeft = "0";
+            document.getElementById("keliauti3").style.marginLeft = "0";
+            document.getElementById("keliauti4").style.marginLeft = "0";
+            document.getElementById("keliauti5").style.marginLeft = "0";
+            document.getElementById("keliauti6").style.marginLeft = "0";
+            document.getElementById("keliauti7").style.marginLeft = "0";
+            document.getElementById("keliauti8").style.marginLeft = "0";
+            document.getElementById("keliauti9").style.marginLeft = "0";
+            document.getElementById("keliauti10").style.marginLeft = "0";
+            document.getElementById("keliauti11").style.marginLeft = "0";
+            document.getElementById("keliauti12").style.marginLeft = "0";
+            document.getElementById("keliauti13").style.marginLeft = "0";
+            document.getElementById("keliauti14").style.marginLeft = "0";
+            document.getElementById("keliauti15").style.marginLeft = "0";
+            document.getElementById("keliauti16").style.marginLeft = "0";
+            document.getElementById("keliauti17").style.marginLeft = "0";
+            document.getElementById("keliauti18").style.marginLeft = "0";
+            document.getElementById("keliauti19").style.marginLeft = "0";
+            document.getElementById("keliauti20").style.marginLeft = "0";
+            document.getElementById("keliauti21").style.marginLeft = "0";
+            document.getElementById("keliauti22").style.marginLeft = "0";
+
+            document.getElementById("baigti1").style.right = "-15%";
+            document.getElementById("baigti2").style.right = "-15%";
+            document.getElementById("baigti3").style.right = "-15%";
+            document.getElementById("baigti4").style.right = "-30%";
+            document.getElementById("baigti5").style.right = "-15%";
+            document.getElementById("baigti6").style.right = "-15%";
+            document.getElementById("baigti7").style.right = "-30%";
+            document.getElementById("baigti8").style.right = "-15%";
+            document.getElementById("baigti9").style.right = "-30%";
+            document.getElementById("baigti10").style.right = "-15%";
+            document.getElementById("baigti11").style.right = "-30%";
+            document.getElementById("baigti12").style.right = "-15%";
+            document.getElementById("baigti13").style.right = "-15%";
+            document.getElementById("maps1").style.right = "-15%";
+            document.getElementById("maps2").style.right = "-15%";
+            document.getElementById("maps3").style.right = "-15%";
+            document.getElementById("maps4").style.right = "-15%";
+            
             document.getElementById("uzdaryti").style.opacity = "0";
             document.getElementById("daugiau").style.opacity = "0";
             document.getElementById("closeButtons").style.display = "none";
             document.getElementById("extraMenu").style.opacity = "0";
-
-            document.getElementById("ejimas1").style.marginLeft = "0";
-            document.getElementById("ejimas2").style.marginLeft = "0";
-            document.getElementById("ejimas3").style.marginLeft = "0";
-            document.getElementById("ejimas4").style.marginLeft = "0";
-            document.getElementById("ejimas5").style.marginLeft = "0";
-            document.getElementById("atvykimas1").style.marginLeft = "0";
-            document.getElementById("atvykimas2").style.marginLeft = "0";
-            document.getElementById("atvykimas3").style.marginLeft = "0";
-            document.getElementById("atvykimas4").style.marginLeft = "0";
-            document.getElementById("atvykimas5").style.marginLeft = "0";
-            document.getElementById("visit1").style.marginLeft = "0";
-            document.getElementById("visit2").style.marginLeft = "0";
-            document.getElementById("visit3").style.marginLeft = "0";
-            document.getElementById("visit4").style.marginLeft = "0";
-            document.getElementById("navigate1").style.right = "-15%";
-            document.getElementById("navigate2").style.right = "-15%";
-            document.getElementById("navigate3").style.right = "-15%";
-            document.getElementById("navigate4").style.right = "-15%";
-            document.getElementById("navigate5").style.right = "-15%";
-            document.getElementById("checking1").style.right = "-30%";
-            document.getElementById("checking2").style.right = "-15%";
-            document.getElementById("checking3").style.right = "-30%";
-            document.getElementById("checking4").style.right = "-15%";
-            document.getElementById("checking5").style.right = "-30%";
-            document.getElementById("checking6").style.right = "-15%";
-            document.getElementById("checking7").style.right = "-30%";
-            document.getElementById("checking8").style.right = "-15%";
-            document.getElementById("checking9").style.right = "-30%";
-
-            document.getElementById("traukinukas1").style.marginLeft = "0";
-            document.getElementById("traukinukas2").style.marginLeft = "0";
-            document.getElementById("ejimukas1").style.marginLeft = "0";
-            document.getElementById("atvykimukas1").style.marginLeft = "0";
-            document.getElementById("atvykimukas2").style.marginLeft = "0";
-            document.getElementById("atvykimukas3").style.marginLeft = "0";
-            document.getElementById("laukimukas1").style.marginLeft = "0";
-            document.getElementById("navigacijukas1").style.right = "-15%";
-            document.getElementById("pabaigtukas1").style.right = "-15%";
-            document.getElementById("pabaigtukas2").style.right = "-30%";
-            document.getElementById("pabaigtukas3").style.right = "-15%";
-            document.getElementById("pabaigtukas4").style.right = "-15%";
             setTimeout(() => {
                 document.getElementById("extraMenu").style.height = "0";
                 document.getElementById("extraMenu").style.width = "0";
             }, 300);
         }
-        function check1() {
-            document.cookie = "vaziavimas-1=complete";
-            document.getElementById("bus1").style.marginLeft = "0";
-            document.getElementById("bus1").style.opacity = "0.3";
-            document.getElementById("bus1").style.pointerEvents = "none";
-            document.getElementById("arrive1").style.marginLeft = "0";
-            document.getElementById("arrive1").style.opacity = "0.3";
-            document.getElementById("arrive1").style.pointerEvents = "none";
-            document.getElementById("check1").style.right = "-15%";
+        function baigti1() {
+            document.cookie = "baigimas1=taip";
+            document.getElementById("keliauti1").style.marginLeft = "0";
+            document.getElementById("keliauti1").style.opacity = "0.3";
+            document.getElementById("keliauti1").style.pointerEvents = "none";
+            document.getElementById("keliauti2").style.marginLeft = "0";
+            document.getElementById("keliauti2").style.opacity = "0.3";
+            document.getElementById("keliauti2").style.pointerEvents = "none";
+            document.getElementById("baigti1").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookis = getCookie("vaziavimas-1");
-        if (cookis != "") {
-            document.getElementById("bus1").style.opacity = "0.3";
-            document.getElementById("bus1").style.pointerEvents = "none";
-            document.getElementById("arrive1").style.opacity = "0.3";
-            document.getElementById("arrive1").style.pointerEvents = "none";
+        let slapukas1 = getCookie("baigimas1");
+        if (slapukas1 != "") {
+            document.getElementById("keliauti1").style.opacity = "0.3";
+            document.getElementById("keliauti1").style.pointerEvents = "none";
+            document.getElementById("keliauti2").style.opacity = "0.3";
+            document.getElementById("keliauti2").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("bus1").style.opacity = "1";
-            document.getElementById("bus1").style.pointerEvents = "all";
-            document.getElementById("arrive1").style.opacity = "1";
-            document.getElementById("arrive1").style.pointerEvents = "all";
-            if (cookis != "" && cookis != null) {
-                document.getElementById("bus1").style.opacity = "1";
-                document.getElementById("bus1").style.pointerEvents = "all";
-                document.getElementById("arrive1").style.opacity = "1";
-                document.getElementById("arrive1").style.pointerEvents = "all";
+            document.getElementById("keliauti1").style.opacity = "1";
+            document.getElementById("keliauti1").style.pointerEvents = "all";
+            document.getElementById("keliauti2").style.opacity = "1";
+            document.getElementById("keliauti2").style.pointerEvents = "all";
+            if (slapukas1 != "" && slapukas1 != null) {
+                document.getElementById("keliauti1").style.opacity = "1";
+                document.getElementById("keliauti1").style.pointerEvents = "all";
+                document.getElementById("keliauti2").style.opacity = "1";
+                document.getElementById("keliauti2").style.pointerEvents = "all";
             }
         }
-        function check2() {
-            document.cookie = "vaziavimas-2=complete";
-            document.getElementById("wait1").style.marginLeft = "0";
-            document.getElementById("wait1").style.opacity = "0.3";
-            document.getElementById("wait1").style.pointerEvents = "none";
-            document.getElementById("check2").style.right = "-15%";
+        function baigti2() {
+            document.cookie = "baigimas2=taip";
+            document.getElementById("keliauti3").style.marginLeft = "0";
+            document.getElementById("keliauti3").style.opacity = "0.3";
+            document.getElementById("keliauti3").style.pointerEvents = "none";
+            document.getElementById("baigti2").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookis2 = getCookie("vaziavimas-2");
-        if (cookis2 != "") {
-            document.getElementById("wait1").style.opacity = "0.3";
-            document.getElementById("wait1").style.pointerEvents = "none";
+        let slapukas2 = getCookie("baigimas2");
+        if (slapukas2 != "") {
+            document.getElementById("keliauti3").style.opacity = "0.3";
+            document.getElementById("keliauti3").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("wait1").style.opacity = "1";
-            document.getElementById("wait1").style.pointerEvents = "all";
-            if (cookis2 != "" && cookis2 != null) {
-                document.getElementById("wait1").style.opacity = "1";
-            document.getElementById("wait1").style.pointerEvents = "all";
+            document.getElementById("keliauti3").style.opacity = "1";
+            document.getElementById("keliauti3").style.pointerEvents = "all";
+            if (slapukas2 != "" && slapukas2 != null) {
+                document.getElementById("keliauti3").style.opacity = "1";
+                document.getElementById("keliauti3").style.pointerEvents = "all";
             }
         }
-        function check3() {
-            document.cookie = "vaziavimas-3=complete";
-            document.getElementById("bus2").style.marginLeft = "0";
-            document.getElementById("bus2").style.opacity = "0.3";
-            document.getElementById("bus2").style.pointerEvents = "none";
-            document.getElementById("arrive2").style.marginLeft = "0";
-            document.getElementById("arrive2").style.opacity = "0.3";
-            document.getElementById("arrive2").style.pointerEvents = "none";
-            document.getElementById("check3").style.right = "-15%";
+        function baigti3() {
+            document.cookie = "baigimas3=taip";
+            document.getElementById("keliauti4").style.marginLeft = "0";
+            document.getElementById("keliauti4").style.opacity = "0.3";
+            document.getElementById("keliauti4").style.pointerEvents = "none";
+            document.getElementById("keliauti5").style.marginLeft = "0";
+            document.getElementById("keliauti5").style.opacity = "0.3";
+            document.getElementById("keliauti5").style.pointerEvents = "none";
+            document.getElementById("baigti3").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookis3 = getCookie("vaziavimas-3");
-        if (cookis3 != "") {
-            document.getElementById("bus2").style.opacity = "0.3";
-            document.getElementById("bus2").style.pointerEvents = "none";
-            document.getElementById("arrive2").style.opacity = "0.3";
-            document.getElementById("arrive2").style.pointerEvents = "none";
+        let slapukas3 = getCookie("baigimas3");
+        if (slapukas3 != "") {
+            document.getElementById("keliauti4").style.opacity = "0.3";
+            document.getElementById("keliauti4").style.pointerEvents = "none";
+            document.getElementById("keliauti5").style.opacity = "0.3";
+            document.getElementById("keliauti5").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("bus2").style.opacity = "1";
-            document.getElementById("bus2").style.pointerEvents = "all";
-            document.getElementById("arrive2").style.opacity = "1";
-            document.getElementById("arrive2").style.pointerEvents = "all";
-            if (cookis3 != "" && cookis3 != null) {
-                document.getElementById("bus2").style.opacity = "1";
-                document.getElementById("bus2").style.pointerEvents = "all";
-                document.getElementById("arrive2").style.opacity = "1";
-                document.getElementById("arrive2").style.pointerEvents = "all";
+            document.getElementById("keliauti4").style.opacity = "1";
+            document.getElementById("keliauti4").style.pointerEvents = "all";
+            document.getElementById("keliauti5").style.opacity = "1";
+            document.getElementById("keliauti5").style.pointerEvents = "all";
+            if (slapukas3 != "" && slapukas3 != null) {
+                document.getElementById("keliauti4").style.opacity = "1";
+                document.getElementById("keliauti4").style.pointerEvents = "all";
+                document.getElementById("keliauti5").style.opacity = "1";
+                document.getElementById("keliauti5").style.pointerEvents = "all";
             }
         }
-        function check4() {
-            document.cookie = "vaziavimas-4=complete";
-            document.getElementById("eiti1").style.marginLeft = "0";
-            document.getElementById("eiti1").style.opacity = "0.3";
-            document.getElementById("eiti1").style.pointerEvents = "none";
-            document.getElementById("arrive3").style.marginLeft = "0";
-            document.getElementById("arrive3").style.opacity = "0.3";
-            document.getElementById("arrive3").style.pointerEvents = "none";
-            document.getElementById("check4").style.right = "-30%";
-            document.getElementById("navigation1").style.right = "-15%";
+        function baigti4() {
+            document.cookie = "baigimas4=taip";
+            document.getElementById("keliauti6").style.marginLeft = "0";
+            document.getElementById("keliauti6").style.opacity = "0.3";
+            document.getElementById("keliauti6").style.pointerEvents = "none";
+            document.getElementById("keliauti7").style.marginLeft = "0";
+            document.getElementById("keliauti7").style.opacity = "0.3";
+            document.getElementById("keliauti7").style.pointerEvents = "none";
+            document.getElementById("maps1").style.right = "-15%";
+            document.getElementById("baigti4").style.right = "-30%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookis4 = getCookie("vaziavimas-4");
-        if (cookis4 != "") {
-            document.getElementById("eiti1").style.opacity = "0.3";
-            document.getElementById("eiti1").style.pointerEvents = "none";
-            document.getElementById("arrive3").style.opacity = "0.3";
-            document.getElementById("arrive3").style.pointerEvents = "none";
+        let slapukas4 = getCookie("baigimas4");
+        if (slapukas4 != "") {
+            document.getElementById("keliauti6").style.opacity = "0.3";
+            document.getElementById("keliauti6").style.pointerEvents = "none";
+            document.getElementById("keliauti7").style.opacity = "0.3";
+            document.getElementById("keliauti7").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("eiti1").style.opacity = "1";
-            document.getElementById("eiti1").style.pointerEvents = "all";
-            document.getElementById("arrive3").style.opacity = "1";
-            document.getElementById("arrive3").style.pointerEvents = "all";
-            if (cookis4 != "" && cookis4 != null) {
-                document.getElementById("eiti1").style.opacity = "1";
-                document.getElementById("eiti1").style.pointerEvents = "all";
-                document.getElementById("arrive3").style.opacity = "1";
-                document.getElementById("arrive3").style.pointerEvents = "all";
+            document.getElementById("keliauti6").style.opacity = "1";
+            document.getElementById("keliauti6").style.pointerEvents = "all";
+            document.getElementById("keliauti7").style.opacity = "1";
+            document.getElementById("keliauti7").style.pointerEvents = "all";
+            if (slapukas4 != "" && slapukas4 != null) {
+                document.getElementById("keliauti6").style.opacity = "1";
+                document.getElementById("keliauti6").style.pointerEvents = "all";
+                document.getElementById("keliauti7").style.opacity = "1";
+                document.getElementById("keliauti7").style.pointerEvents = "all";
             }
         }
-        function navigation1() {
+        function maps1() {
             document.getElementById("atidaromaNavigacija").style.display = "flex";
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
@@ -1605,99 +1414,96 @@
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.display = "none";
             }, 3350);
-            document.getElementById("eiti1").style.marginLeft = "0";
-            document.getElementById("arrive3").style.marginLeft = "0";
-            document.getElementById("check4").style.right = "-30%";
-            document.getElementById("navigation1").style.right = "-15%";
+            document.getElementById("keliauti6").style.marginLeft = "0";
+            document.getElementById("keliauti7").style.marginLeft = "0";
+            document.getElementById("baigti4").style.right = "-30%";
+            document.getElementById("maps1").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/bodiA92H7Yoi4Xjk7');
+            window.open('https://maps.app.goo.gl/5Tnyy7bRGWPTKU1m7');
         }
-        function check5() {
-            document.cookie = "vaziavimas-5=complete";
-            document.getElementById("wait2").style.marginLeft = "0";
-            document.getElementById("wait2").style.opacity = "0.3";
-            document.getElementById("wait2").style.pointerEvents = "none";
-            document.getElementById("check5").style.right = "-15%";
+        function baigti5() {
+            document.cookie = "baigimas5=taip";
+            document.getElementById("keliauti8").style.marginLeft = "0";
+            document.getElementById("keliauti8").style.opacity = "0.3";
+            document.getElementById("keliauti8").style.pointerEvents = "none";
+            document.getElementById("baigti5").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookis5 = getCookie("vaziavimas-5");
-        if (cookis5 != "") {
-            document.getElementById("wait2").style.opacity = "0.3";
-            document.getElementById("wait2").style.pointerEvents = "none";
+        let slapukas5 = getCookie("baigimas5");
+        if (slapukas5 != "") {
+            document.getElementById("keliauti8").style.opacity = "0.3";
+            document.getElementById("keliauti8").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("wait2").style.opacity = "1";
-            document.getElementById("wait2").style.pointerEvents = "all";
-            if (cookis5 != "" && cookis5 != null) {
-                document.getElementById("wait2").style.opacity = "1";
-            document.getElementById("wait2").style.pointerEvents = "all";
+            document.getElementById("keliauti8").style.opacity = "1";
+            document.getElementById("keliauti8").style.pointerEvents = "all";
+            if (slapukas5 != "" && slapukas5 != null) {
+                document.getElementById("keliauti8").style.opacity = "1";
+                document.getElementById("keliauti8").style.pointerEvents = "all";
             }
         }
-        function check6() {
-            document.cookie = "vaziavimas-6=complete";
-            document.getElementById("train1").style.marginLeft = "0";
-            document.getElementById("train1").style.opacity = "0.3";
-            document.getElementById("train1").style.pointerEvents = "none";
-            document.getElementById("arrive4").style.marginLeft = "0";
-            document.getElementById("arrive4").style.opacity = "0.3";
-            document.getElementById("arrive4").style.pointerEvents = "none";
-            document.getElementById("check6").style.right = "-15%";
+        function baigti6() {
+            document.cookie = "baigimas6=taip";
+            document.getElementById("keliauti9").style.marginLeft = "0";
+            document.getElementById("keliauti9").style.opacity = "0.3";
+            document.getElementById("keliauti9").style.pointerEvents = "none";
+            document.getElementById("keliauti10").style.marginLeft = "0";
+            document.getElementById("keliauti10").style.opacity = "0.3";
+            document.getElementById("keliauti10").style.pointerEvents = "none";
+            document.getElementById("baigti6").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookis6 = getCookie("vaziavimas-6");
-        if (cookis6 != "") {
-            document.getElementById("train1").style.opacity = "0.3";
-            document.getElementById("train1").style.pointerEvents = "none";
-            document.getElementById("arrive4").style.opacity = "0.3";
-            document.getElementById("arrive4").style.pointerEvents = "none";
+        let slapukas6 = getCookie("baigimas6");
+        if (slapukas6 != "") {
+            document.getElementById("keliauti9").style.opacity = "0.3";
+            document.getElementById("keliauti9").style.pointerEvents = "none";
+            document.getElementById("keliauti10").style.opacity = "0.3";
+            document.getElementById("keliauti10").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("train1").style.opacity = "1";
-            document.getElementById("train1").style.pointerEvents = "all";
-            document.getElementById("arrive4").style.opacity = "1";
-            document.getElementById("arrive4").style.pointerEvents = "all";
-            if (cookis6 != "" && cookis6 != null) {
-                document.getElementById("train1").style.opacity = "1";
-                document.getElementById("train1").style.pointerEvents = "all";
-                document.getElementById("arrive4").style.opacity = "1";
-                document.getElementById("arrive4").style.pointerEvents = "all";
+            document.getElementById("keliauti9").style.opacity = "1";
+            document.getElementById("keliauti9").style.pointerEvents = "all";
+            document.getElementById("keliauti10").style.opacity = "1";
+            document.getElementById("keliauti10").style.pointerEvents = "all";
+            if (slapukas6 != "" && slapukas6 != null) {
+                document.getElementById("keliauti9").style.opacity = "1";
+                document.getElementById("keliauti9").style.pointerEvents = "all";
+                document.getElementById("keliauti10").style.opacity = "1";
+                document.getElementById("keliauti10").style.pointerEvents = "all";
             }
         }
-
-        
-
-        function checking1() {
-            document.cookie = "lankymasis-1=complete";
-            document.getElementById("ejimas1").style.marginLeft = "0";
-            document.getElementById("ejimas1").style.opacity = "0.3";
-            document.getElementById("ejimas1").style.pointerEvents = "none";
-            document.getElementById("atvykimas1").style.marginLeft = "0";
-            document.getElementById("atvykimas1").style.opacity = "0.3";
-            document.getElementById("atvykimas1").style.pointerEvents = "none";
-            document.getElementById("checking1").style.right = "-30%";
-            document.getElementById("navigate1").style.right = "-15%";
+        function baigti7() {
+            document.cookie = "baigimas7=taip";
+            document.getElementById("keliauti11").style.marginLeft = "0";
+            document.getElementById("keliauti11").style.opacity = "0.3";
+            document.getElementById("keliauti11").style.pointerEvents = "none";
+            document.getElementById("keliauti12").style.marginLeft = "0";
+            document.getElementById("keliauti12").style.opacity = "0.3";
+            document.getElementById("keliauti12").style.pointerEvents = "none";
+            document.getElementById("maps2").style.right = "-15%";
+            document.getElementById("baigti7").style.right = "-30%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi1 = getCookie("lankymasis-1");
-        if (cookisi1 != "") {
-            document.getElementById("ejimas1").style.opacity = "0.3";
-            document.getElementById("ejimas1").style.pointerEvents = "none";
-            document.getElementById("atvykimas1").style.opacity = "0.3";
-            document.getElementById("atvykimas1").style.pointerEvents = "none";
+        let slapukas7 = getCookie("baigimas7");
+        if (slapukas7 != "") {
+            document.getElementById("keliauti11").style.opacity = "0.3";
+            document.getElementById("keliauti11").style.pointerEvents = "none";
+            document.getElementById("keliauti12").style.opacity = "0.3";
+            document.getElementById("keliauti12").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("ejimas1").style.opacity = "1";
-            document.getElementById("ejimas1").style.pointerEvents = "all";
-            document.getElementById("atvykimas1").style.opacity = "1";
-            document.getElementById("atvykimas1").style.pointerEvents = "all";
-            if (cookisi1 != "" && cookisi1 != null) {
-                document.getElementById("ejimas1").style.opacity = "1";
-                document.getElementById("ejimas1").style.pointerEvents = "all";
-                document.getElementById("atvykimas1").style.opacity = "1";
-                document.getElementById("atvykimas1").style.pointerEvents = "all";
+            document.getElementById("keliauti11").style.opacity = "1";
+            document.getElementById("keliauti11").style.pointerEvents = "all";
+            document.getElementById("keliauti12").style.opacity = "1";
+            document.getElementById("keliauti12").style.pointerEvents = "all";
+            if (slapukas7 != "" && slapukas7 != null) {
+                document.getElementById("keliauti11").style.opacity = "1";
+                document.getElementById("keliauti11").style.pointerEvents = "all";
+                document.getElementById("keliauti12").style.opacity = "1";
+                document.getElementById("keliauti12").style.pointerEvents = "all";
             }
         }
-        function navigate1() {
+        function maps2() {
             document.getElementById("atidaromaNavigacija").style.display = "flex";
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
@@ -1708,66 +1514,66 @@
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.display = "none";
             }, 3350);
-            document.getElementById("ejimas1").style.marginLeft = "0";
-            document.getElementById("atvykimas1").style.marginLeft = "0";
-            document.getElementById("checking1").style.right = "-30%";
-            document.getElementById("navigate1").style.right = "-15%";
+            document.getElementById("keliauti11").style.marginLeft = "0";
+            document.getElementById("keliauti12").style.marginLeft = "0";
+            document.getElementById("baigti7").style.right = "-30%";
+            document.getElementById("maps2").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/qm5Jqhszdr5ZKPeP9');
+            window.open('https://maps.app.goo.gl/hzkBavobXNnu7N4Q7');
         }
-        function checking2() {
-            document.cookie = "lankymasis-2=complete";
-            document.getElementById("visit1").style.marginLeft = "0";
-            document.getElementById("visit1").style.opacity = "0.3";
-            document.getElementById("visit1").style.pointerEvents = "none";
-            document.getElementById("checking2").style.right = "-15%";
+        function baigti8() {
+            document.cookie = "baigimas8=taip";
+            document.getElementById("keliauti13").style.marginLeft = "0";
+            document.getElementById("keliauti13").style.opacity = "0.3";
+            document.getElementById("keliauti13").style.pointerEvents = "none";
+            document.getElementById("baigti8").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi2 = getCookie("lankymasis-2");
-        if (cookisi2 != "") {
-            document.getElementById("visit1").style.opacity = "0.3";
-            document.getElementById("visit1").style.pointerEvents = "none";
+        let slapukas8 = getCookie("baigimas8");
+        if (slapukas8 != "") {
+            document.getElementById("keliauti13").style.opacity = "0.3";
+            document.getElementById("keliauti13").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("visit1").style.opacity = "1";
-            document.getElementById("visit1").style.pointerEvents = "all";
-            if (cookisi2 != "" && cookisi2 != null) {
-                document.getElementById("visit1").style.opacity = "1";
-            document.getElementById("visit1").style.pointerEvents = "all";
+            document.getElementById("keliauti13").style.opacity = "1";
+            document.getElementById("keliauti13").style.pointerEvents = "all";
+            if (slapukas8 != "" && slapukas8 != null) {
+                document.getElementById("keliauti13").style.opacity = "1";
+                document.getElementById("keliauti13").style.pointerEvents = "all";
             }
         }
-        function checking3() {
-            document.cookie = "lankymasis-3=complete";
-            document.getElementById("ejimas2").style.marginLeft = "0";
-            document.getElementById("ejimas2").style.opacity = "0.3";
-            document.getElementById("ejimas2").style.pointerEvents = "none";
-            document.getElementById("atvykimas2").style.marginLeft = "0";
-            document.getElementById("atvykimas2").style.opacity = "0.3";
-            document.getElementById("atvykimas2").style.pointerEvents = "none";
-            document.getElementById("checking3").style.right = "-30%";
-            document.getElementById("navigate2").style.right = "-15%";
+        function baigti9() {
+            document.cookie = "baigimas9=taip";
+            document.getElementById("keliauti14").style.marginLeft = "0";
+            document.getElementById("keliauti14").style.opacity = "0.3";
+            document.getElementById("keliauti14").style.pointerEvents = "none";
+            document.getElementById("keliauti15").style.marginLeft = "0";
+            document.getElementById("keliauti15").style.opacity = "0.3";
+            document.getElementById("keliauti15").style.pointerEvents = "none";
+            document.getElementById("maps3").style.right = "-15%";
+            document.getElementById("baigti9").style.right = "-30%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi3 = getCookie("lankymasis-3");
-        if (cookisi3 != "") {
-            document.getElementById("ejimas2").style.opacity = "0.3";
-            document.getElementById("ejimas2").style.pointerEvents = "none";
-            document.getElementById("atvykimas2").style.opacity = "0.3";
-            document.getElementById("atvykimas2").style.pointerEvents = "none";
+        let slapukas9 = getCookie("baigimas9");
+        if (slapukas9 != "") {
+            document.getElementById("keliauti14").style.opacity = "0.3";
+            document.getElementById("keliauti14").style.pointerEvents = "none";
+            document.getElementById("keliauti15").style.opacity = "0.3";
+            document.getElementById("keliauti15").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("ejimas2").style.opacity = "1";
-            document.getElementById("ejimas2").style.pointerEvents = "all";
-            document.getElementById("atvykimas2").style.opacity = "1";
-            document.getElementById("atvykimas2").style.pointerEvents = "all";
-            if (cookisi3 != "" && cookisi3 != null) {
-                document.getElementById("ejimas2").style.opacity = "1";
-                document.getElementById("ejimas2").style.pointerEvents = "all";
-                document.getElementById("atvykimas2").style.opacity = "1";
-                document.getElementById("atvykimas2").style.pointerEvents = "all";
+            document.getElementById("keliauti14").style.opacity = "1";
+            document.getElementById("keliauti14").style.pointerEvents = "all";
+            document.getElementById("keliauti15").style.opacity = "1";
+            document.getElementById("keliauti15").style.pointerEvents = "all";
+            if (slapukas9 != "" && slapukas9 != null) {
+                document.getElementById("keliauti14").style.opacity = "1";
+                document.getElementById("keliauti14").style.pointerEvents = "all";
+                document.getElementById("keliauti15").style.opacity = "1";
+                document.getElementById("keliauti15").style.pointerEvents = "all";
             }
         }
-        function navigate2() {
+        function maps3() {
             document.getElementById("atidaromaNavigacija").style.display = "flex";
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
@@ -1778,66 +1584,75 @@
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.display = "none";
             }, 3350);
-            document.getElementById("ejimas2").style.marginLeft = "0";
-            document.getElementById("atvykimas2").style.marginLeft = "0";
-            document.getElementById("checking3").style.right = "-30%";
-            document.getElementById("navigate2").style.right = "-15%";
+            document.getElementById("keliauti14").style.marginLeft = "0";
+            document.getElementById("keliauti15").style.marginLeft = "0";
+            document.getElementById("baigti9").style.right = "-30%";
+            document.getElementById("maps3").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/Vx3Hqf3EG73QYWR48');
+            window.open('https://maps.app.goo.gl/ggdnkp7tPEz1u2Gz7');
         }
-        function checking4() {
-            document.cookie = "lankymasis-4=complete";
-            document.getElementById("visit2").style.marginLeft = "0";
-            document.getElementById("visit2").style.opacity = "0.3";
-            document.getElementById("visit2").style.pointerEvents = "none";
-            document.getElementById("checking4").style.right = "-15%";
+        function baigti10() {
+            document.cookie = "baigimas10=taip";
+            document.getElementById("keliauti16").style.marginLeft = "0";
+            document.getElementById("keliauti16").style.opacity = "0.3";
+            document.getElementById("keliauti16").style.pointerEvents = "none";
+            document.getElementById("keliauti17").style.marginLeft = "0";
+            document.getElementById("keliauti17").style.opacity = "0.3";
+            document.getElementById("keliauti17").style.pointerEvents = "none";
+            document.getElementById("baigti10").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi4 = getCookie("lankymasis-4");
-        if (cookisi4 != "") {
-            document.getElementById("visit2").style.opacity = "0.3";
-            document.getElementById("visit2").style.pointerEvents = "none";
+        let slapukas10 = getCookie("baigimas10");
+        if (slapukas10 != "") {
+            document.getElementById("keliauti16").style.opacity = "0.3";
+            document.getElementById("keliauti16").style.pointerEvents = "none";
+            document.getElementById("keliauti17").style.opacity = "0.3";
+            document.getElementById("keliauti17").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("visit2").style.opacity = "1";
-            document.getElementById("visit2").style.pointerEvents = "all";
-            if (cookisi4 != "" && cookisi4 != null) {
-                document.getElementById("visit2").style.opacity = "1";
-            document.getElementById("visit2").style.pointerEvents = "all";
+            document.getElementById("keliauti16").style.opacity = "1";
+            document.getElementById("keliauti16").style.pointerEvents = "all";
+            document.getElementById("keliauti17").style.opacity = "1";
+            document.getElementById("keliauti17").style.pointerEvents = "all";
+            if (slapukas10 != "" && slapukas10 != null) {
+                document.getElementById("keliauti16").style.opacity = "1";
+                document.getElementById("keliauti16").style.pointerEvents = "all";
+                document.getElementById("keliauti17").style.opacity = "1";
+                document.getElementById("keliauti17").style.pointerEvents = "all";
             }
         }
-        function checking5() {
-            document.cookie = "lankymasis-5=complete";
-            document.getElementById("ejimas3").style.marginLeft = "0";
-            document.getElementById("ejimas3").style.opacity = "0.3";
-            document.getElementById("ejimas3").style.pointerEvents = "none";
-            document.getElementById("atvykimas3").style.marginLeft = "0";
-            document.getElementById("atvykimas3").style.opacity = "0.3";
-            document.getElementById("atvykimas3").style.pointerEvents = "none";
-            document.getElementById("checking5").style.right = "-30%";
-            document.getElementById("navigate3").style.right = "-15%";
+        function baigti11() {
+            document.cookie = "baigimas11=taip";
+            document.getElementById("keliauti18").style.marginLeft = "0";
+            document.getElementById("keliauti18").style.opacity = "0.3";
+            document.getElementById("keliauti18").style.pointerEvents = "none";
+            document.getElementById("keliauti19").style.marginLeft = "0";
+            document.getElementById("keliauti19").style.opacity = "0.3";
+            document.getElementById("keliauti19").style.pointerEvents = "none";
+            document.getElementById("maps4").style.right = "-15%";
+            document.getElementById("baigti11").style.right = "-30%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi5 = getCookie("lankymasis-5");
-        if (cookisi5 != "") {
-            document.getElementById("ejimas3").style.opacity = "0.3";
-            document.getElementById("ejimas3").style.pointerEvents = "none";
-            document.getElementById("atvykimas3").style.opacity = "0.3";
-            document.getElementById("atvykimas3").style.pointerEvents = "none";
+        let slapukas11 = getCookie("baigimas11");
+        if (slapukas11 != "") {
+            document.getElementById("keliauti18").style.opacity = "0.3";
+            document.getElementById("keliauti18").style.pointerEvents = "none";
+            document.getElementById("keliauti19").style.opacity = "0.3";
+            document.getElementById("keliauti19").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("ejimas3").style.opacity = "1";
-            document.getElementById("ejimas3").style.pointerEvents = "all";
-            document.getElementById("atvykimas3").style.opacity = "1";
-            document.getElementById("atvykimas3").style.pointerEvents = "all";
-            if (cookisi5 != "" && cookisi5 != null) {
-                document.getElementById("ejimas3").style.opacity = "1";
-                document.getElementById("ejimas3").style.pointerEvents = "all";
-                document.getElementById("atvykimas3").style.opacity = "1";
-                document.getElementById("atvykimas3").style.pointerEvents = "all";
+            document.getElementById("keliauti18").style.opacity = "1";
+            document.getElementById("keliauti18").style.pointerEvents = "all";
+            document.getElementById("keliauti19").style.opacity = "1";
+            document.getElementById("keliauti19").style.pointerEvents = "all";
+            if (slapukas11 != "" && slapukas11 != null) {
+                document.getElementById("keliauti18").style.opacity = "1";
+                document.getElementById("keliauti18").style.pointerEvents = "all";
+                document.getElementById("keliauti19").style.opacity = "1";
+                document.getElementById("keliauti19").style.pointerEvents = "all";
             }
         }
-        function navigate3() {
+        function maps4() {
             document.getElementById("atidaromaNavigacija").style.display = "flex";
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
@@ -1848,284 +1663,62 @@
             setTimeout(() => {
                 document.getElementById("atidaromaNavigacija").style.display = "none";
             }, 3350);
-            document.getElementById("ejimas3").style.marginLeft = "0";
-            document.getElementById("atvykimas3").style.marginLeft = "0";
-            document.getElementById("checking5").style.right = "-30%";
-            document.getElementById("navigate3").style.right = "-15%";
+            document.getElementById("keliauti18").style.marginLeft = "0";
+            document.getElementById("keliauti19").style.marginLeft = "0";
+            document.getElementById("baigti11").style.right = "-30%";
+            document.getElementById("maps4").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/K27bhTFBWJuAzHs56');
+            window.open('https://maps.app.goo.gl/6btyYFnh3YicNgnDA');
         }
-        function checking6() {
-            document.cookie = "lankymasis-6=complete";
-            document.getElementById("visit3").style.marginLeft = "0";
-            document.getElementById("visit3").style.opacity = "0.3";
-            document.getElementById("visit3").style.pointerEvents = "none";
-            document.getElementById("checking6").style.right = "-15%";
+        function baigti12() {
+            document.cookie = "baigimas12=taip";
+            document.getElementById("keliauti20").style.marginLeft = "0";
+            document.getElementById("keliauti20").style.opacity = "0.3";
+            document.getElementById("keliauti20").style.pointerEvents = "none";
+            document.getElementById("baigti12").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi6 = getCookie("lankymasis-6");
-        if (cookisi6 != "") {
-            document.getElementById("visit3").style.opacity = "0.3";
-            document.getElementById("visit3").style.pointerEvents = "none";
+        let slapukas12 = getCookie("baigimas12");
+        if (slapukas12 != "") {
+            document.getElementById("keliauti20").style.opacity = "0.3";
+            document.getElementById("keliauti20").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("visit3").style.opacity = "1";
-            document.getElementById("visit3").style.pointerEvents = "all";
-            if (cookisi6 != "" && cookisi6 != null) {
-                document.getElementById("visit3").style.opacity = "1";
-            document.getElementById("visit3").style.pointerEvents = "all";
+            document.getElementById("keliauti20").style.opacity = "1";
+            document.getElementById("keliauti20").style.pointerEvents = "all";
+            if (slapukas12 != "" && slapukas12 != null) {
+                document.getElementById("keliauti20").style.opacity = "1";
+                document.getElementById("keliauti20").style.pointerEvents = "all";
             }
         }
-        function checking7() {
-            document.cookie = "lankymasis-7=complete";
-            document.getElementById("ejimas4").style.marginLeft = "0";
-            document.getElementById("ejimas4").style.opacity = "0.3";
-            document.getElementById("ejimas4").style.pointerEvents = "none";
-            document.getElementById("atvykimas4").style.marginLeft = "0";
-            document.getElementById("atvykimas4").style.opacity = "0.3";
-            document.getElementById("atvykimas4").style.pointerEvents = "none";
-            document.getElementById("checking7").style.right = "-30%";
-            document.getElementById("navigate4").style.right = "-15%";
+        function baigti13() {
+            document.cookie = "baigimas13=taip";
+            document.getElementById("keliauti21").style.marginLeft = "0";
+            document.getElementById("keliauti21").style.opacity = "0.3";
+            document.getElementById("keliauti21").style.pointerEvents = "none";
+            document.getElementById("keliauti22").style.marginLeft = "0";
+            document.getElementById("keliauti22").style.opacity = "0.3";
+            document.getElementById("keliauti22").style.pointerEvents = "none";
+            document.getElementById("baigti13").style.right = "-15%";
             document.getElementById("closeButtons").style.display = "none";
         }
-        let cookisi7 = getCookie("lankymasis-7");
-        if (cookisi7 != "") {
-            document.getElementById("ejimas4").style.opacity = "0.3";
-            document.getElementById("ejimas4").style.pointerEvents = "none";
-            document.getElementById("atvykimas4").style.opacity = "0.3";
-            document.getElementById("atvykimas4").style.pointerEvents = "none";
+        let slapukas13 = getCookie("baigimas13");
+        if (slapukas13 != "") {
+            document.getElementById("keliauti21").style.opacity = "0.3";
+            document.getElementById("keliauti21").style.pointerEvents = "none";
+            document.getElementById("keliauti22").style.opacity = "0.3";
+            document.getElementById("keliauti22").style.pointerEvents = "none";
         }
         else {
-            document.getElementById("ejimas4").style.opacity = "1";
-            document.getElementById("ejimas4").style.pointerEvents = "all";
-            document.getElementById("atvykimas4").style.opacity = "1";
-            document.getElementById("atvykimas4").style.pointerEvents = "all";
-            if (cookisi7 != "" && cookisi7 != null) {
-                document.getElementById("ejimas4").style.opacity = "1";
-                document.getElementById("ejimas4").style.pointerEvents = "all";
-                document.getElementById("atvykimas4").style.opacity = "1";
-                document.getElementById("atvykimas4").style.pointerEvents = "all";
-            }
-        }
-        function navigate4() {
-            document.getElementById("atidaromaNavigacija").style.display = "flex";
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
-            }, 50);
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.opacity = "0";
-            }, 3050);
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.display = "none";
-            }, 3350);
-            document.getElementById("ejimas4").style.marginLeft = "0";
-            document.getElementById("atvykimas4").style.marginLeft = "0";
-            document.getElementById("checking7").style.right = "-30%";
-            document.getElementById("navigate4").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/v7D9cEgdMgWPdydV9');
-        }
-        function checking8() {
-            document.cookie = "lankymasis-8=complete";
-            document.getElementById("visit4").style.marginLeft = "0";
-            document.getElementById("visit4").style.opacity = "0.3";
-            document.getElementById("visit4").style.pointerEvents = "none";
-            document.getElementById("checking8").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-        }
-        let cookisi8 = getCookie("lankymasis-8");
-        if (cookisi8 != "") {
-            document.getElementById("visit4").style.opacity = "0.3";
-            document.getElementById("visit4").style.pointerEvents = "none";
-        }
-        else {
-            document.getElementById("visit4").style.opacity = "1";
-            document.getElementById("visit4").style.pointerEvents = "all";
-            if (cookisi8 != "" && cookisi8 != null) {
-                document.getElementById("visit4").style.opacity = "1";
-            document.getElementById("visit4").style.pointerEvents = "all";
-            }
-        }
-        function checking9() {
-            document.cookie = "lankymasis-9=complete";
-            document.getElementById("ejimas5").style.marginLeft = "0";
-            document.getElementById("ejimas5").style.opacity = "0.3";
-            document.getElementById("ejimas5").style.pointerEvents = "none";
-            document.getElementById("atvykimas5").style.marginLeft = "0";
-            document.getElementById("atvykimas5").style.opacity = "0.3";
-            document.getElementById("atvykimas5").style.pointerEvents = "none";
-            document.getElementById("checking9").style.right = "-30%";
-            document.getElementById("navigate5").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-        }
-        let cookisi9 = getCookie("lankymasis-9");
-        if (cookisi9 != "") {
-            document.getElementById("ejimas5").style.opacity = "0.3";
-            document.getElementById("ejimas5").style.pointerEvents = "none";
-            document.getElementById("atvykimas5").style.opacity = "0.3";
-            document.getElementById("atvykimas5").style.pointerEvents = "none";
-        }
-        else {
-            document.getElementById("ejimas5").style.opacity = "1";
-            document.getElementById("ejimas5").style.pointerEvents = "all";
-            document.getElementById("atvykimas5").style.opacity = "1";
-            document.getElementById("atvykimas5").style.pointerEvents = "all";
-            if (cookisi9 != "" && cookisi9 != null) {
-                document.getElementById("ejimas5").style.opacity = "1";
-                document.getElementById("ejimas5").style.pointerEvents = "all";
-                document.getElementById("atvykimas5").style.opacity = "1";
-                document.getElementById("atvykimas5").style.pointerEvents = "all";
-            }
-        }
-        function navigate5() {
-            document.getElementById("atidaromaNavigacija").style.display = "flex";
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
-            }, 50);
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.opacity = "0";
-            }, 3050);
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.display = "none";
-            }, 3350);
-            document.getElementById("ejimas5").style.marginLeft = "0";
-            document.getElementById("atvykimas5").style.marginLeft = "0";
-            document.getElementById("checking9").style.right = "-30%";
-            document.getElementById("navigate5").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/BQgjfamnTKYBfnoG7');
-        }
-
-
-
-        function pabaigtukas1() {
-            document.cookie = "vaziuojamas-1=complete";
-            document.getElementById("traukinukas1").style.marginLeft = "0";
-            document.getElementById("traukinukas1").style.opacity = "0.3";
-            document.getElementById("traukinukas1").style.pointerEvents = "none";
-            document.getElementById("atvykimukas1").style.marginLeft = "0";
-            document.getElementById("atvykimukas1").style.opacity = "0.3";
-            document.getElementById("atvykimukas1").style.pointerEvents = "none";
-            document.getElementById("pabaigtukas1").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-        }
-        let cookise1 = getCookie("vaziuojamas-1");
-        if (cookise1 != "") {
-            document.getElementById("traukinukas1").style.opacity = "0.3";
-            document.getElementById("traukinukas1").style.pointerEvents = "none";
-            document.getElementById("atvykimukas1").style.opacity = "0.3";
-            document.getElementById("atvykimukas1").style.pointerEvents = "none";
-        }
-        else {
-            document.getElementById("traukinukas1").style.opacity = "1";
-            document.getElementById("traukinukas1").style.pointerEvents = "all";
-            document.getElementById("atvykimukas1").style.opacity = "1";
-            document.getElementById("atvykimukas1").style.pointerEvents = "all";
-            if (cookise1 != "" && cookise1 != null) {
-                document.getElementById("traukinukas1").style.opacity = "1";
-                document.getElementById("traukinukas1").style.pointerEvents = "all";
-                document.getElementById("atvykimukas1").style.opacity = "1";
-                document.getElementById("atvykimukas1").style.pointerEvents = "all";
-            }
-        }
-        function pabaigtukas2() {
-            document.cookie = "vaziuojamas-2=complete";
-            document.getElementById("ejimukas1").style.marginLeft = "0";
-            document.getElementById("ejimukas1").style.opacity = "0.3";
-            document.getElementById("ejimukas1").style.pointerEvents = "none";
-            document.getElementById("atvykimukas2").style.marginLeft = "0";
-            document.getElementById("atvykimukas2").style.opacity = "0.3";
-            document.getElementById("atvykimukas2").style.pointerEvents = "none";
-            document.getElementById("navigacijukas1").style.right = "-15%";
-            document.getElementById("pabaigtukas2").style.right = "-30%";
-            document.getElementById("closeButtons").style.display = "none";
-        }
-        let cookise2 = getCookie("vaziuojamas-2");
-        if (cookise2 != "") {
-            document.getElementById("ejimukas1").style.opacity = "0.3";
-            document.getElementById("ejimukas1").style.pointerEvents = "none";
-            document.getElementById("atvykimukas2").style.opacity = "0.3";
-            document.getElementById("atvykimukas2").style.pointerEvents = "none";
-        }
-        else {
-            document.getElementById("ejimukas1").style.opacity = "1";
-            document.getElementById("ejimukas1").style.pointerEvents = "all";
-            document.getElementById("atvykimukas2").style.opacity = "1";
-            document.getElementById("atvykimukas2").style.pointerEvents = "all";
-            if (cookise2 != "" && cookise2 != null) {
-                document.getElementById("ejimukas1").style.opacity = "1";
-                document.getElementById("ejimukas1").style.pointerEvents = "all";
-                document.getElementById("atvykimukas2").style.opacity = "1";
-                document.getElementById("atvykimukas2").style.pointerEvents = "all";
-            }
-        }
-        function navigacijukas1() {
-            document.getElementById("atidaromaNavigacija").style.display = "flex";
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.opacity = "0.9";
-            }, 50);
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.opacity = "0";
-            }, 3050);
-            setTimeout(() => {
-                document.getElementById("atidaromaNavigacija").style.display = "none";
-            }, 3350);
-            document.getElementById("ejimukas1").style.marginLeft = "0";
-            document.getElementById("atvykimukas2").style.marginLeft = "0";
-            document.getElementById("pabaigtukas2").style.right = "-30%";
-            document.getElementById("navigacijukas1").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-            window.open('https://maps.app.goo.gl/LDeyk5UWXNvyvDKb6');
-        }
-        function pabaigtukas3() {
-            document.cookie = "vaziuojamas-3=complete";
-            document.getElementById("laukimukas1").style.marginLeft = "0";
-            document.getElementById("laukimukas1").style.opacity = "0.3";
-            document.getElementById("laukimukas1").style.pointerEvents = "none";
-            document.getElementById("pabaigtukas3").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-        }
-        let cookise3 = getCookie("vaziuojamas-3");
-        if (cookise3 != "") {
-            document.getElementById("laukimukas1").style.opacity = "0.3";
-            document.getElementById("laukimukas1").style.pointerEvents = "none";
-        }
-        else {
-            document.getElementById("laukimukas1").style.opacity = "1";
-            document.getElementById("laukimukas11").style.pointerEvents = "all";
-            if (cookise3 != "" && cookise3 != null) {
-                document.getElementById("laukimukas1").style.opacity = "1";
-                document.getElementById("laukimukas1").style.pointerEvents = "all";
-            }
-        }
-        function pabaigtukas4() {
-            document.cookie = "vaziuojamas-4=complete";
-            document.getElementById("traukinukas2").style.marginLeft = "0";
-            document.getElementById("traukinukas2").style.opacity = "0.3";
-            document.getElementById("traukinukas2").style.pointerEvents = "none";
-            document.getElementById("atvykimukas3").style.marginLeft = "0";
-            document.getElementById("atvykimukas3").style.opacity = "0.3";
-            document.getElementById("atvykimukas3").style.pointerEvents = "none";
-            document.getElementById("pabaigtukas4").style.right = "-15%";
-            document.getElementById("closeButtons").style.display = "none";
-        }
-        let cookise4 = getCookie("vaziuojamas-4");
-        if (cookise4 != "") {
-            document.getElementById("traukinukas2").style.opacity = "0.3";
-            document.getElementById("traukinukas2").style.pointerEvents = "none";
-            document.getElementById("atvykimukas3").style.opacity = "0.3";
-            document.getElementById("atvykimukas3").style.pointerEvents = "none";
-        }
-        else {
-            document.getElementById("traukinukas2").style.opacity = "1";
-            document.getElementById("traukinukas2").style.pointerEvents = "all";
-            document.getElementById("atvykimukas3").style.opacity = "1";
-            document.getElementById("atvykimukas3").style.pointerEvents = "all";
-            if (cookise4 != "" && cookise4 != null) {
-                document.getElementById("traukinukas2").style.opacity = "1";
-                document.getElementById("traukinukas2").style.pointerEvents = "all";
-                document.getElementById("atvykimukas3").style.opacity = "1";
-                document.getElementById("atvykimukas3").style.pointerEvents = "all";
+            document.getElementById("keliauti21").style.opacity = "1";
+            document.getElementById("keliauti21").style.pointerEvents = "all";
+            document.getElementById("keliauti22").style.opacity = "1";
+            document.getElementById("keliauti22").style.pointerEvents = "all";
+            if (slapukas13 != "" && slapukas13 != null) {
+                document.getElementById("keliauti21").style.opacity = "1";
+                document.getElementById("keliauti21").style.pointerEvents = "all";
+                document.getElementById("keliauti22").style.opacity = "1";
+                document.getElementById("keliauti22").style.pointerEvents = "all";
             }
         }
     </script>
